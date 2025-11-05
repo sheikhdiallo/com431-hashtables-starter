@@ -5,11 +5,8 @@ class TuplesLinkedList:
         self.first = None
         self.last = None
 
-    # TODO modify "add()" so that it takes a key and a value as parameters and 
-    # creates a  tuple using them. The Node should then be created using the 
-    # tuple.
-    def add(self, value):
-        n = Node(value)
+    def add(self, key, value):
+        n = Node((key ,value))
         if self.first is None:
             self.first = n
             self.last = n
