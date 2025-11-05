@@ -24,15 +24,23 @@ class TuplesLinkedList:
                 currentNode = currentNode.next
                 counter += 1
         return None
-    
-    # TODO modify "find()" so that it takes a KEY as a parameter  and searches 
-    # the linked list until it finds a tuple with that key. It should then
-    # return the value (i.e. the second member of the tuple)
-    def find(self, searchInput):
-        currentNode = self.first
-        while currentNode is not None:
-            if currentNode.value == searchInput:
-                return currentNode
-            else:
-                currentNode = currentNode.next
-        return None
+def find(self, key):
+    currentNode = self.first
+    while currentNode is not None:
+        # currentNode.value is the tuple (key, value)
+        # Used if else to check if the first element of the tuple matches the key
+        if currentNode.value[0] == key:
+            return currentNode.value[1]
+        else:
+            currentNode = currentNode.next
+    return None
+
+def __str__(self):
+    contents = []
+    current_node = self.first
+    while current_node is not None:
+        contents.append(current_node.value)
+        current_node = current_node.next
+
+    return contents.__str__()
+
