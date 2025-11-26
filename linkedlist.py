@@ -16,23 +16,23 @@ class TuplesLinkedList:
 
     def get(self, index):
         counter = 0
-        currentNode = self.first
-        while currentNode is not None:
+        currentnode = self.first
+        while currentnode is not None:
             if counter == index:
-                return currentNode
+                return currentnode
             else:
-                currentNode = currentNode.next
+                currentnode = currentnode.next
                 counter += 1
         return None
 def find(self, key):
-    currentNode = self.first
-    while currentNode is not None:
-        # currentNode.value is the tuple (key, value)
+    currentnode = self.first
+    while currentnode is not None:
+        # currentNode.value is the tuple key and value
         # Used if else to check if the first element of the tuple matches the key
-        if currentNode.value[0] == key:
-            return currentNode.value[1]
+        if currentnode.value[0] == key:
+            return currentnode.value[1]
         else:
-            currentNode = currentNode.next
+            currentnode = currentnode.next
     return None
 
 def __str__(self):
